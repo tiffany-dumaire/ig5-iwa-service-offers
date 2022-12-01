@@ -18,15 +18,11 @@ public class OfferService {
         return offerRepository.findAll();
     }
 
-    public Optional<Offer> getById(int id) {
-        return offerRepository.findById(id);
+    public Optional<Offer> getById(int offer_id) {
+        return offerRepository.findByOfferid(offer_id);
     }
 
     public Offer save(Offer newOffer) {
         return offerRepository.save(newOffer);
-    }
-
-    public void delete(int id){
-        offerRepository.deleteById(id);
     }
 }

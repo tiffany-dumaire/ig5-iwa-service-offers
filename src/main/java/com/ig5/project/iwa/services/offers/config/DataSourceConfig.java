@@ -23,7 +23,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         transactionManagerRef = "transactionManager",
         entityManagerFactoryRef = "entityManagerFactory",
-        basePackages = "com.example.springbootrestsecurity.jpa.repository")
+        basePackages = "com.ig5.project.iwa.services.offers.jpa.repository")
 public class DataSourceConfig {
 
     @Bean
@@ -40,7 +40,7 @@ public class DataSourceConfig {
         properties.put("hibernate.format_sql", "true");
         return builder
                 .dataSource(DataSource())
-                .packages("com.example.springbootrestsecurity.jpa.entity")
+                .packages("com.ig5.project.iwa.services.offers.jpa.entity")
                 .persistenceUnit("default")
                 .properties(properties)
                 .build();
