@@ -12,12 +12,26 @@ public class RecommandationService {
     @Autowired
     RecommandationRepository recommandationRepository;
 
+    /**
+     * Récupération de l'ensemble des recommandations
+     * @return
+     */
     public List<Recommandation> getAll() { return recommandationRepository.findAll(); }
 
+    /**
+     * Récupération de la liste des recommandations pour un user donné
+     * @param user_id
+     * @return
+     */
     public List<Recommandation> getRecommandationByUserId(int user_id) {
         return recommandationRepository.findByUserid(user_id);
     }
 
+    /**
+     * Création d'une recommandation
+     * @param recommandation
+     * @return
+     */
     public Recommandation createRecommandation(Recommandation recommandation) {
         return recommandationRepository.save(recommandation);
     }

@@ -19,7 +19,7 @@ public class Company {
     private String adress;
 
     @Column(name="createdby")
-    private int createby;
+    private int createdby;
 
     public long getCompanyid() {
         return companyid;
@@ -45,11 +45,11 @@ public class Company {
         this.adress = adress;
     }
 
-    public int getCreateby() {
-        return createby;
+    public int getCreatedby() {
+        return createdby;
     }
 
-    public void setCreateby(int createby) {
-        this.createby = createby;
+    public void setCreatedby(int createdby) {
+        this.createdby = createdby;
     }
 }

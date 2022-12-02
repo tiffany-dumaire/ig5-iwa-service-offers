@@ -23,7 +23,7 @@ public class Offer {
     private int companyid;
 
     @Column(name="createdby")
-    private int createby;
+    private int createdby;
 
     @Column(name="createdat")
     private Date createdat;
@@ -66,12 +66,12 @@ public class Offer {
         this.companyid = companyid;
     }
 
-    public int getCreateby() {
-        return createby;
+    public int getCreatedby() {
+        return createdby;
     }
 
-    public void setCreateby(int createby) {
-        this.createby = createby;
+    public void setCreatedby(int createdby) {
+        this.createdby = createdby;
     }
 
     public Date getOpenat() {

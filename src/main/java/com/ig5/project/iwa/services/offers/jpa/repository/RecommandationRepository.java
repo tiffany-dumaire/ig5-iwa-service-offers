@@ -8,5 +8,10 @@ import java.util.List;
 
 @Repository
 public interface RecommandationRepository extends JpaRepository<Recommandation,Long> {
+    /**
+     * Requête pour récupérer les recommandations par user_id
+     * @param user_id
+     * @return
+     */
     List<Recommandation> findByUserid(int user_id);
 }
