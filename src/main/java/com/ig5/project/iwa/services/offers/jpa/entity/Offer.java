@@ -34,12 +34,59 @@ public class Offer {
     @Column(name="closeat")
     private Date closeat;
 
-
     public int getOfferid() {
         return offerid;
     }
 
     public void setOfferid(int offerid) {
         this.offerid = offerid;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getCompanyid() {
+        return companyid;
+    }
+
+    public void setCompanyid(int companyid) {
+        this.companyid = companyid;
+    }
+
+    public int getCreateby() {
+        return createby;
+    }
+
+    public void setCreateby(int createby) {
+        this.createby = createby;
+    }
+
+    public Date getOpenat() {
+        return openat;
+    }
+
+    public void setOpenat(Date openat) {
+        this.openat = openat;
+    }
+
+    public Date getCloseat() {
+        return closeat;
+    }
+
+    public void setCloseat(Date closeat) {
+        this.closeat = closeat;
     }
 }
