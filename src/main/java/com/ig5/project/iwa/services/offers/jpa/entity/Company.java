@@ -10,22 +10,22 @@ import javax.persistence.Table;
 public class Company {
     @Id
     @Column(name="companyid")
-    private int companyid;
+    private long companyid;
 
     @Column(name="name")
     private String name;
 
-    @Column(name="adresse")
-    private String adresse;
+    @Column(name="adress")
+    private String adress;
 
     @Column(name="createdby")
     private int createby;
 
-    public int getCompanyid() {
+    public long getCompanyid() {
         return companyid;
     }
 
-    public void setCompanyid(int companyid) {
+    public void setCompanyid(long companyid) {
         this.companyid = companyid;
     }
 
@@ -37,12 +37,12 @@ public class Company {
         this.name = name;
     }
 
-    public String getAdresse() {
-        return adresse;
+    public String getAdress() {
+        return adress;
     }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 
     public int getCreateby() {

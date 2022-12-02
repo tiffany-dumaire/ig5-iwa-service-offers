@@ -18,4 +18,8 @@ public class CompanyService {
     }
 
     public Optional<Company> findById(Long company_id) { return companyRepository.findById(company_id); }
+
+    public Company createCompany(Company company) {
+        return companyRepository.save(company);
+    }
 }

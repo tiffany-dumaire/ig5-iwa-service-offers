@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/offers")
@@ -38,12 +39,17 @@ public class OfferController {
         return offerService.findByTitleContainsOrDescriptionContains(title, description);
     }
 
+    @GetMapping("/byId/{id}")
+    public Optional<Offer> getOfferById(@PathVariable("id") int offer_id) {
+        return offerService.getById(offer_id);
+    }
+
     @PostMapping("")
     public Offer createCustomer(@RequestBody Offer offer) {
         return offerService.save(offer);
     }
 
-    @PutMapping("/modify/{id}")
+    @PutMapping("/close/{id}")
     public int closeOffer(@RequestBody Date closeat, @PathVariable("id") int offer_id) {
         return offerService.updateCloseatByOfferid(closeat, offer_id);
     }
